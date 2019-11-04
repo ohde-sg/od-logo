@@ -5,8 +5,21 @@
   <title>OD-Logo</title>
 </head>
 <body>
+  <div style="text-align: center;">
+    <img id="od-img" src="">
+  </div>
   <script type="text/javascript">
-    console.log("wow");
+    let images = [
+      "od-1.png",
+      "od-2.png",
+      "od-3.png",
+      "od-4.png",
+    ];
+    setInterval(function(){
+      let od_img = document.getElementById('od-img');
+      let image = images[Math.floor(Math.random()*images.length)];
+      od_img.src="/images/"+image;
+    },1000);
   </script>
 </body>
 </html>
